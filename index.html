@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Antón Ceballos</title>  <!-- ✏️ CHANGE: your name / site title -->
+  <meta name="description" content="My personal page">
+
+  <!-- Jost web font — fixes accented characters (ó, é, ñ...) and looks the same on all devices -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      /* ✏️ CHANGE: your burgundy color — one place controls all text */
+      --burgundy: #5C0E23;
+      --burgundy-soft: #7A1B33;
+    }
+
+    body {
+      /* ✏️ CHANGE: "background.jpg" = your image file in the same repo folder
+         (or use "images/background.jpg" if it's in a subfolder) */
+      background: url("background.jpg") center/cover no-repeat fixed;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: "Jost", "Avenir Next", "Avenir", "Helvetica Neue",
+                   "PingFang SC", "PingFang TC", "PingFang HK",
+                   "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    }
+
+    .card {
+      text-align: center;
+      padding: 40px 35px;
+      max-width: 500px;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.25);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-radius: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.4);
+    }
+
+    /* H1 — Bold (weight 700) */
+    h1 {
+      color: var(--burgundy);
+      font-weight: 700;
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+    }
+
+    /* Tagline — Semibold (weight 600) */
+    .tagline {
+      color: var(--burgundy-soft);
+      font-weight: 600;
+      font-size: 1.1rem;
+      margin-bottom: 40px;
+    }
+
+    /* Links — plain text, no buttons */
+    .links { display: flex; flex-direction: column; gap: 22px; }
+
+    /* Link names — Semibold (weight 600) */
+    .links a {
+      color: var(--burgundy);
+      font-weight: 600;
+      font-size: 1.15rem;
+      text-decoration: none;
+      letter-spacing: 0.03em;
+      transition: color 0.2s ease;
+    }
+
+    /* Hover: darkest shade with an underline */
+    .links a:hover {
+      color: #3E0716;
+      text-decoration: underline;
+      text-underline-offset: 5px;
+    }
+
+    /* ── Contact form — frosted glass, compact ── */
+    .contact-form {
+      margin-top: 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      padding: 10px 12px;
+      border: 1px solid var(--burgundy);
+      border-radius: 8px;
+      font-family: inherit;
+      font-size: 0.9rem;
+      color: var(--burgundy);
+      background: rgba(255, 255, 255, 0.25);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      resize: vertical;
+    }
+
+    .contact-form input::placeholder,
+    .contact-form textarea::placeholder {
+      color: var(--burgundy-soft);
+      opacity: 0.7;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      outline: 2px solid var(--burgundy);
+      outline-offset: 2px;
+    }
+
+    .contact-form button {
+      padding: 10px 26px;
+      background: var(--burgundy);
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-family: inherit;
+      font-weight: 600;
+      font-size: 0.95rem;
+      letter-spacing: 0.03em;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+
+    .contact-form button:hover {
+      background: #3E0716;
+    }
+
+    footer {
+      text-align: center;
+      color: var(--burgundy-soft);
+      font-weight: 400;
+      font-size: 0.8rem;
+      position: fixed;
+      bottom: 15px;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <!-- ✏️ CHANGE: your name (with your ó!) and tagline -->
+    <h1>Antón Ceballos</h1>
+    <p class="tagline">art</p>
+
+    <div class="links">
+      <!-- ✏️ CHANGE: edit href="" links. Duplicate any line to add more, delete what you don't need -->
+      <a href="https://instagram.com/antonceballos" target="_blank">Instagram</a>
+      <a href="https://youtube.com/@AnTONceballos" target="_blank">YouTube</a>
+    <!-- ✏️ CHANGE: replace "yourformid" with your Formspree form ID
+         (from https://formspree.io — looks like https://formspree.io/f/xeaarvja) -->
+    <form class="contact-form" action="https://formspree.io/f/yourformid" method="POST">
+      <input type="email" name="email" placeholder="Your email" required>
+      <textarea name="message" placeholder="Your message" rows="2" required></textarea>
+      <button type="submit">Contact Me</button>
+    </form>
+  </div>
+
+  <footer>© 2026 Antón Ceballos</footer>
+
+</body>
+</html>
